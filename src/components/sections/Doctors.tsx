@@ -105,7 +105,7 @@ export function Doctors() {
 
         {/* Cards grid */}
         <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
@@ -174,25 +174,25 @@ export function Doctors() {
               </div>
 
               {/* Info panel */}
-              <div className="p-5 flex flex-col gap-2">
+              <div className="p-2.5 sm:p-5 flex flex-col gap-1 sm:gap-2">
                 {/* Name */}
-                <h3 className="text-[1rem] font-extrabold leading-snug" style={{ color: "#0F172A" }}>
+                <h3 className="text-[0.75rem] sm:text-[1rem] font-extrabold leading-tight" style={{ color: "#0F172A" }}>
                   {doc.name}
                 </h3>
 
                 {/* Specialty */}
-                <div className="flex items-center gap-1.5">
-                  <BadgeCheck className="w-3.5 h-3.5 flex-shrink-0" style={{ color: doc.accentColor }} />
-                  <span className="text-sm font-bold" style={{ color: doc.accentColor }}>
+                <div className="flex items-center gap-1">
+                  <BadgeCheck className="w-3 h-3 sm:w-3.5 sm:h-3.5 flex-shrink-0" style={{ color: doc.accentColor }} />
+                  <span className="text-[0.7rem] sm:text-sm font-bold" style={{ color: doc.accentColor }}>
                     {doc.specialty}
                   </span>
                 </div>
 
                 {/* Experience */}
-                <div className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 flex-shrink-0" style={{ color: "#475569" }} />
-                  <span className="text-xs font-semibold" style={{ color: "#475569" }}>
-                    {doc.experience} Experience
+                <div className="flex items-center gap-1">
+                  <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5 flex-shrink-0" style={{ color: "#475569" }} />
+                  <span className="text-[0.65rem] sm:text-xs font-semibold" style={{ color: "#475569" }}>
+                    {doc.experience} Exp.
                   </span>
                 </div>
               </div>
